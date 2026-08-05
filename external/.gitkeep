@@ -1,0 +1,2 @@
+# Third-party likelihood codes are fetched into this directory by
+# scripts/fetch_wmap_likelihood.sh. Contents are gitignored.

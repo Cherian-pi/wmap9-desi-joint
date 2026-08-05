@@ -1,0 +1,17 @@
+
+python module wmap9_wrap
+    interface
+        subroutine wmap_likelihood_init()
+            intent(c) wmap_likelihood_init
+        end subroutine wmap_likelihood_init
+
+        subroutine wmap_likelihood_compute(cltt, clte, clee, clbb, like)
+            intent(c) wmap_likelihood_compute
+            real(kind=8), intent(in)  :: cltt(1199)   ! ell=2..1200
+            real(kind=8), intent(in)  :: clte(799)    ! ell=2..800
+            real(kind=8), intent(in)  :: clee(799)    ! ell=2..800
+            real(kind=8), intent(in)  :: clbb(799)    ! ell=2..800
+            real(kind=8), intent(out) :: like(7)      ! 7 components
+        end subroutine wmap_likelihood_compute
+    end interface
+end python module wmap9_wrap

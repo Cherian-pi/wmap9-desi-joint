@@ -1,0 +1,52 @@
+# --- macOS / editors ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+*.egg-info/
+
+# --- third-party likelihood codes (fetched by scripts/, ~1 GB) ---
+external/*
+!external/.gitkeep
+
+# --- compiled likelihood artifacts (platform-specific, build locally) ---
+*.so
+*.o
+*.mod
+*.a
+
+# --- large / regenerable data ---
+*.fits
+*.tar
+*.tar.gz
+data/bao/**/sdss_DR16_ELG_FSBAO_*.txt
+
+# --- chain sprawl: commit only curated production chains ---
+results/chains/*
+!results/chains/wmap9_desi_joint_*.npy
+!results/chains/wmap9_lcdm_*_20260614_235110.npy
+!results/chains/wmap9_lcdm_meta_*.json
+!results/chains/desi_dr1_lcdm_*_chains.npy
+!results/chains/planck_tt_lcdm_chains.npy
+!results/chains/chain_filenames.txt
+
+# --- notebook HTML exports (large, regenerable) ---
+*.nbconvert.ipynb
+notebooks/*.html
+
+# --- LaTeX build products ---
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fdb_latexmk
+paper/*.fls
