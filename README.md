@@ -14,8 +14,8 @@ Joint WMAP9 + DESI DR1 flat ΛCDM (32 walkers, Gelman–Rubin R̂ < 1.002):
 
 | Parameter | Joint constraint |
 |---|---|
-| H₀ | 67.41 ± 0.53 km s⁻¹ Mpc⁻¹ |
-| Ω_m | 0.3069 ± 0.0063 |
+| $H_0$ | 67.41 ± 0.53 km s⁻¹ Mpc⁻¹ |
+| $Ω_m$ | 0.3069 ± 0.0063 |
 
 Adding DESI BAO to WMAP9 collapses the CMB-only geometric degeneracy: the long
 Ω_m–H₀ ridge in the WMAP9-alone posterior shrinks to a compact contour
