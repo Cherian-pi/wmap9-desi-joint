@@ -1,23 +1,17 @@
-chain_filenames.txt
-desi_bao_lcdm_flat_20260615_010240.npy
-desi_bao_lcdm_flat_20260615_094324.npy
-desi_bao_lcdm_flat_20260615_184435.npy
+# Production chains in this directory
+#
+# WMAP9 alone (run 2026-06-14 23:51:10)
+wmap9_lcdm_full_chain_20260614_235110.npy      # (nsteps, nwalkers, ndim)
+wmap9_lcdm_flat_samples_20260614_235110.npy    # post-burn-in flat samples
+wmap9_lcdm_logprob_20260614_235110.npy         # log-posterior per sample
+wmap9_lcdm_meta_20260614_235110.json           # run metadata
+
+# WMAP9 + DESI DR1 joint (run 2026-06-28 00:49:48)
+wmap9_desi_joint_chain_20260628_004948.npy     # (nsteps, nwalkers, ndim)
+wmap9_desi_joint_flat_20260628_004948.npy      # post-burn-in flat samples
+
+# DESI DR1 BAO alone — comparison baseline only
 desi_dr1_lcdm_bao_only_chains.npy
-desi_dr1_lcdm_with_rd_prior_chains.npy
-planck_tt_lcdm_chains.npy
-wmap9_desi_joint_chain_20260626_232941.npy
-WMAP9_DESI_JOINT_CHAIN_20260628_004948.NPY
-wmap9_desi_joint_flat_20260626_232941.npy
-WMAP9_DESI_JOINT_FLAT_20260628_004948.NPY
-wmap9_lcdm_flat_samples_20260614_085325.npy
-wmap9_lcdm_flat_samples_20260614_155511.npy
-wmap9_lcdm_flat_samples_20260614_235110.npy
-wmap9_lcdm_full_chain_20260614_085325.npy
-wmap9_lcdm_full_chain_20260614_155511.npy
-wmap9_lcdm_full_chain_20260614_235110.npy
-wmap9_lcdm_logprob_20260614_085325.npy
-wmap9_lcdm_logprob_20260614_155511.npy
-wmap9_lcdm_logprob_20260614_235110.npy
-wmap9_lcdm_meta_20260614_085325.json
-wmap9_lcdm_meta_20260614_155511.json
-wmap9_lcdm_meta_20260614_235110.json
+
+# Superseded reruns and out-of-scope chains (Planck, DESI DR2) are not
+# committed; they remain in the working directory outside this repository.
