@@ -14,11 +14,18 @@ Joint WMAP9 + DESI DR1 flat ΛCDM (32 walkers, Gelman–Rubin R̂ < 1.002):
 
 | Parameter | Joint constraint |
 |---|---|
-| $H_0$ | 67.41 ± 0.53 km s⁻¹ Mpc⁻¹ |
-| $Ω_m$ | 0.3069 ± 0.0063 |
+| H₀ | 67.41 ± 0.53 km s⁻¹ Mpc⁻¹ |
+| Ω_m | 0.3069 ± 0.0063 |
+
+![Six-parameter ΛCDM posterior: WMAP9 alone versus WMAP9 + DESI DR1](figures/publication/fig1_lcdm_triangle_wmap9_vs_joint.png)
+
+*All six sampled parameters, WMAP9 alone (blue) against the joint posterior
+(orange). The contraction is concentrated in Ω_c h² and H₀, where BAO breaks the
+CMB geometric degeneracy; n_s, ln10¹⁰A_s and τ are essentially unchanged, as
+expected since BAO carries no information about them.*
 
 Adding DESI BAO to WMAP9 collapses the CMB-only geometric degeneracy: the long
-$Ω_m–H_0$ ridge in the WMAP9-alone posterior shrinks to a compact contour
+Ω_m–H₀ ridge in the WMAP9-alone posterior shrinks to a compact contour
 (`fig4`), tightening H₀ by roughly a factor of three while shifting it downward
 by about 2 km s⁻¹ Mpc⁻¹. No Planck r_d prior is used anywhere — WMAP9 calibrates
 the sound horizon through the acoustic peaks itself.
@@ -30,10 +37,10 @@ WMAP9 alone against the WMAP9 + DESI DR1 joint posterior.
 
 | Figure | Content |
 |---|---|
-| `fig1_lcdm_triangle_wmap9_vs_joint` | Full six-parameter triangle: $Ω_b h^2, Ω_c h^2, H_0, n_s, ln10^{10}A_s, τ$ |
-| `fig2_shared_params` | The four parameters BAO can inform:$ Ω_b h^2, Ω_c h^2, H_0, Ω_m$ |
-| `fig3_Omegam_vs_densities_wmap9_joint` | $Ω_m$ against the physical densities |
-| `fig4_Omegam_vs_H0_wmap9_joint` | The $Ω_m–H_0$ plane — the clearest single view of what BAO adds |
+| `fig1_lcdm_triangle_wmap9_vs_joint` | Full six-parameter triangle: Ω_b h², Ω_c h², H₀, n_s, ln10¹⁰A_s, τ |
+| `fig2_shared_params` | The four parameters BAO can inform: Ω_b h², Ω_c h², H₀, Ω_m |
+| `fig3_Omegam_vs_densities_wmap9_joint` | Ω_m against the physical densities |
+| `fig4_Omegam_vs_H0_wmap9_joint` | The Ω_m–H₀ plane — the clearest single view of what BAO adds |
 
 `figures/diagnostics/` holds convergence and sanity checks: Gelman–Rubin
 statistics, the CAMB-vs-WMAP9 spectrum comparison, and the input bandpowers.
@@ -65,7 +72,7 @@ scripts/        fetch and build helpers for the WMAP9 likelihood
 results/chains/ production emcee chains (.npy) and run metadata (.json)
 figures/        publication figures and MCMC diagnostics
 paper/          parameter table and manuscript source
-docs/           notes and symbol conventions
+docs/           notes, symbol conventions, and the run export for the joint chain
 ```
 
 ## Setup
