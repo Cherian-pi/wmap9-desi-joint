@@ -18,7 +18,7 @@ Joint WMAP9 + DESI DR1 flat ΛCDM (32 walkers, Gelman–Rubin R̂ < 1.002):
 | $Ω_m$ | 0.3069 ± 0.0063 |
 
 Adding DESI BAO to WMAP9 collapses the CMB-only geometric degeneracy: the long
-Ω_m–H₀ ridge in the WMAP9-alone posterior shrinks to a compact contour
+$Ω_m–H_0$ ridge in the WMAP9-alone posterior shrinks to a compact contour
 (`fig4`), tightening H₀ by roughly a factor of three while shifting it downward
 by about 2 km s⁻¹ Mpc⁻¹. No Planck r_d prior is used anywhere — WMAP9 calibrates
 the sound horizon through the acoustic peaks itself.
