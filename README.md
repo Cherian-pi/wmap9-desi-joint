@@ -19,10 +19,10 @@ Joint WMAP9 + DESI DR1 flat ΛCDM (32 walkers, Gelman–Rubin R̂ < 1.002):
 
 ![Six-parameter ΛCDM posterior: WMAP9 alone versus WMAP9 + DESI DR1](figures/publication/fig1_lcdm_triangle_wmap9_vs_joint.png)
 
-*All six sampled parameters, WMAP9 alone (blue) against the joint posterior
+All six sampled parameters, WMAP9 alone (blue) against the joint posterior
 (orange). The contraction is concentrated in $Ω_ch^2$ and $H_0$, where BAO breaks the
 CMB geometric degeneracy; $n_s, ln10^{10}A_s$ and τ are essentially unchanged, as
-expected since BAO carries no information about them.*
+expected since BAO carries no information about them.
 
 Adding DESI BAO to WMAP9 collapses the CMB-only geometric degeneracy: the long
 $Ω_m–H_0$ ridge in the WMAP9-alone posterior shrinks to a compact contour
