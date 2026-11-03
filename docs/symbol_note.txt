@@ -1,0 +1,5 @@
+        # ── gfortran macOS symbol names (2 leading underscores for ctypes/dlsym) ──
+        # nm shows 3 underscores but dlsym prepends one automatically on macOS,
+        # so pass 2 underscores here.
+        INIT_SYM    = '__wmap_likelihood_9yr_MOD_wmap_likelihood_init'
+        COMPUTE_SYM = '__wmap_likelihood_9yr_MOD_wmap_likelihood_compute'

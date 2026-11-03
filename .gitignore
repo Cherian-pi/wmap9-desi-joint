@@ -1,0 +1,23 @@
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+
+# WMAP9 likelihood code and data (downloaded by scripts/fetch_wmap_likelihood.sh, ~1 GB)
+external/*
+!external/.gitkeep
+
+# compiled likelihood library (platform-specific, build locally)
+*.so
+*.o
+*.mod
+*.a
+
+# notebook HTML exports
+notebooks/*.html

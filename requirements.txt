@@ -1,0 +1,9 @@
+numpy>=1.24
+scipy>=1.10
+camb>=1.5
+emcee>=3.1
+getdist>=1.4
+corner>=2.2
+matplotlib>=3.7
+jupyterlab>=4.0
+cobaya>=3.5    # only for the Cobaya cross-check in notebook 04, Cell 5d
