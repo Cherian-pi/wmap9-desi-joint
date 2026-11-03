@@ -35,6 +35,17 @@ $Ω_m–H_0$ ridge in the WMAP9-alone posterior shrinks to a compact contour
 shifting it downward by about 0.5 km s⁻¹ Mpc⁻¹. No Planck r_d prior is used
 anywhere — WMAP9 calibrates the sound horizon through the acoustic peaks itself.
 
+![Omega_m - H0 plane: WMAP9 alone, WMAP9 + DESI DR1, and the DESI BAO-alone bands](figures/publication/getdist_H0_Om_comparison.png)
+
+The $Ω_m–H_0$ plane. WMAP9 alone (blue) and WMAP9 + DESI DR1 (orange); the green bands
+show $Ω_m$ from DESI DR1 and DR2 BAO alone (68%).
+
+![Concordance in the Omega_m - h r_d plane](figures/publication/concordance_Om_hrd.png)
+
+Concordance in the $Ω_m$–$h\,r_d$ plane, the combination BAO measure directly. The WMAP9
+prediction (blue) passes through the DESI DR1 BAO-alone region (green, Δχ² = 2.30 and 6.18),
+and the joint posterior (orange) lies where they overlap.
+
 ## Figures
 
 All in `figures/publication/`.
@@ -44,6 +55,7 @@ All in `figures/publication/`.
 | `getdist_wmap_vs_joint_corner` | Six-parameter triangle plus $Ω_m$: WMAP9 alone vs WMAP9 + DESI DR1 |
 | `getdist_joint_corner` | Joint posterior on its own, with 68% limits |
 | `getdist_H0_Om_comparison` | The $Ω_m–H_0$ plane with the DESI DR1 and DR2 BAO-alone bands |
+| `concordance_Om_hrd` | Concordance in the $Ω_m$–$h\,r_d$ plane: WMAP9 prediction, DESI BAO alone, joint |
 | `Om_comparison` | $Ω_m$ compared with CMB-only and BAO-based results |
 | `wmap9_desi_joint_corrected_trace` | MCMC walker traces |
 | `wmap9_desi_joint_corrected_comparison` | 1D posteriors of $Ω_b h^2$, $Ω_c h^2$, $H_0$ |
