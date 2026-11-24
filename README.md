@@ -42,7 +42,7 @@ show $Ω_m$ from DESI DR1 and DR2 BAO alone (68%).
 
 ![Concordance in the Omega_m - h r_d plane](figures/publication/concordance_Om_hrd.png)
 
-Concordance in the $Ω_m$–$h\,r_d$ plane, the combination BAO measure directly. The WMAP9
+Concordance in the $Ω_m$–$hr_d$ plane, the combination BAO measure directly. The WMAP9
 prediction (blue) passes through the DESI DR1 BAO-alone region (green, Δχ² = 2.30 and 6.18),
 and the joint posterior (orange) lies where they overlap.
 
@@ -72,7 +72,7 @@ is **not uniform across tracers**:
 A loader that assigns by row position rather than by the label column therefore
 transposes the two Lyman-α observables against the covariance matrix, inflating
 the DESI χ². The mean files must be read by their quantity label. Notebook
-`03_desi_dr1_lcdm_corrected.ipynb` documents the diagnosis and the before/after
+`03_desi_dr1_lcdm.ipynb` documents the diagnosis and the before/after
 comparison.
 
 ## Layout
