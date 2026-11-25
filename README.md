@@ -23,25 +23,25 @@ The joint WMAP9 + DESI DR1 fit uses 32 walkers for 3,000 MCMC steps and reaches 
 
 ![ΛCDM posterior: WMAP9 alone versus WMAP9 + DESI DR1](figures/publication/getdist_wmap_vs_joint_corner.png)
 
-*Posterior distributions for the six sampled cosmological parameters and \( \Omega_m \), comparing the WMAP9-only fit (blue) with the joint WMAP9 + DESI DR1 fit (orange).*
+*Posterior distributions for the six sampled cosmological parameters and $\Omega_m$, comparing the WMAP9-only fit (blue) with the joint WMAP9 + DESI DR1 fit (orange).*
 
 ## Interpretation
 
-The largest improvement from adding DESI DR1 BAO is in ( $\Omega_c h^2 $) and ($H_0$ ). BAO provides an independent geometric constraint that breaks the degeneracy between the matter density and the expansion rate present in the CMB-only analysis.
+The largest improvement from adding DESI DR1 BAO is in  $\Omega_c h^2 $ and $H_0$ . BAO provides an independent geometric constraint that breaks the degeneracy between the matter density and the expansion rate present in the CMB-only analysis.
 
-The parameters \( n_s \), \( \ln(10^{10} A_s) \), and \( \tau \) are largely unchanged, as expected: BAO measurements primarily constrain the expansion history and sound horizon, rather than the primordial perturbation spectrum or optical depth
+The parameters $n_s$,  $ln(10^{10} A_s$), and  $\tau$  are largely unchanged, as expected: BAO measurements primarily constrain the expansion history and sound horizon, rather than the primordial perturbation spectrum or optical depth
 
 ![Omega_m - H0 plane: WMAP9 alone, WMAP9 + DESI DR1, and the DESI BAO-alone bands](figures/publication/getdist_H0_Om_comparison.png)
 
-*The \( \Omega_m \)–\(H_0\) plane for WMAP9 alone (blue) and WMAP9 + DESI DR1 (orange). Green bands show the 68% \( \Omega_m \) ranges from DESI DR1 and DR2 BAO-only analyses.*
+*The $\Omega_m$–$H_0$ plane for WMAP9 alone (blue) and WMAP9 + DESI DR1 (orange). Green bands show the 68% $\Omega_m$ ranges from DESI DR1 and DR2 BAO-only analyses.*
 
-In the WMAP9-only case, the posterior exhibits an extended degeneracy ridge in the \( \Omega_m \)–\(H_0\) plane. Adding DESI BAO substantially reduces this degeneracy: the \(H_0\) constraint becomes approximately three times tighter and shifts downward by roughly \(0.5\ \mathrm{km\,s^{-1}\,Mpc^{-1}}\).
+In the WMAP9-only case, the posterior exhibits an extended degeneracy ridge in the  $\Omega_m$ – $H_0$ plane. Adding DESI BAO substantially reduces this degeneracy: the \(H_0\) constraint becomes approximately three times tighter and shifts downward by roughly $0.5 \mathrm{km\,s^{-1}\,Mpc^{-1}}$.
 
 No Planck-derived sound-horizon prior is used. WMAP9 independently determines the sound horizon through its acoustic-peak structure.
 
 ![Concordance in the Omega_m - h r_d plane](figures/publication/concordance_Om_hrd.png)
 
-*The \( \Omega_m \)–\(h r_d\) plane, the primary BAO-sensitive parameter space. The WMAP9 prediction (blue) is consistent with the DESI DR1 BAO-only region (green), while the joint posterior (orange) lies in the overlap of the two constraints.*
+*The $\Omega_m$ – h $r_d$ plane, the primary BAO-sensitive parameter space. The WMAP9 prediction (blue) is consistent with the DESI DR1 BAO-only region (green), while the joint posterior (orange) lies in the overlap of the two constraints.*
 
 ## Figures
 
@@ -67,7 +67,7 @@ When loading the DESI DR1 anisotropic BAO mean files directly, note that the row
 | Lyman-α | `DH_over_rs`, then `DM_over_rs` |
 | BGS, QSO | Isotropic; a single `DV_over_rs` row |
 
-If the data are read by row position rather than by the quantity label, the two Lyman-α values can be incorrectly swapped relative to the covariance matrix. This produces an artificially high DESI \( \chi^2 \).
+If the data are read by row position rather than by the quantity label, the two Lyman-α values can be incorrectly swapped relative to the covariance matrix. This produces an artificially high DESI $\chi^2$.
 
 The recommended approach is to read the mean values using their quantity labels. Notebook `03_desi_dr1_lcdm.ipynb` documents this issue and compares the fit before and after the correction.
 
