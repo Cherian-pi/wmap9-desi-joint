@@ -23,7 +23,7 @@ The joint WMAP9 + DESI DR1 fit uses 32 walkers for 3,000 MCMC steps and reaches 
 
 ![ΛCDM posterior: WMAP9 alone versus WMAP9 + DESI DR1](figures/publication/getdist_wmap_vs_joint_corner.png)
 
-*Posterior distributions for the six sampled cosmological parameters and $\Omega_m$ , comparing the WMAP9-only fit (blue) with the joint WMAP9 + DESI DR1 fit (orange).*
+*Posterior distributions for the six sampled cosmological parameters and ${\Omega_m}Ω_m$ , comparing the WMAP9-only fit (blue) with the joint WMAP9 + DESI DR1 fit (orange).*
 
 ## Interpretation
 
