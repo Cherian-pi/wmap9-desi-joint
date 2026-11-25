@@ -34,15 +34,15 @@ The parameters $n_s$,  $ln(10^{10} A_s$), and  $\tau$  are largely unchanged, as
 
 ![Omega_m - H0 plane: WMAP9 alone, WMAP9 + DESI DR1, and the DESI BAO-alone bands](figures/publication/getdist_H0_Om_comparison.png)
 
-*The $\Omega_m$ – $H_0$ plane for WMAP9 alone (blue) and WMAP9 + DESI DR1 (orange). Green bands show the 68% $\Omega_m$ ranges from DESI DR1 and DR2 BAO-only analyses.*
+*The $`\Omega_m`$ – $`H_0`$ plane for WMAP9 alone (blue) and WMAP9 + DESI DR1 (orange). Green bands show the 68% $\Omega_m$ ranges from DESI DR1 and DR2 BAO-only analyses.*
 
-In the WMAP9-only case, the posterior exhibits an extended degeneracy ridge in the  $\Omega_m$ – $H_0$ plane. Adding DESI BAO substantially reduces this degeneracy: the \(H_0\) constraint becomes approximately three times tighter and shifts downward by roughly $0.5 \mathrm{km\,s^{-1}\,Mpc^{-1}}$.
+In the WMAP9-only case, the posterior exhibits an extended degeneracy ridge in the  $\Omega_m$ – $H_0$ plane. Adding DESI BAO substantially reduces this degeneracy: the $H_0$ constraint becomes approximately three times tighter and shifts downward by roughly $0.5 \mathrm{km\,s^{-1}\,Mpc^{-1}}$.
 
 No Planck-derived sound-horizon prior is used. WMAP9 independently determines the sound horizon through its acoustic-peak structure.
 
 ![Concordance in the Omega_m - h r_d plane](figures/publication/concordance_Om_hrd.png)
 
-*The $\Omega_m$ – h $r_d$ plane, the primary BAO-sensitive parameter space. The WMAP9 prediction (blue) is consistent with the DESI DR1 BAO-only region (green), while the joint posterior (orange) lies in the overlap of the two constraints.*
+*The $`\Omega_m`$ - $`h\,r_d`$ plane, the primary BAO-sensitive parameter space. The WMAP9 prediction (blue) is consistent with the DESI DR1 BAO-only region (green), while the joint posterior (orange) lies in the overlap of the two constraints.*
 
 ## Figures
 
@@ -50,13 +50,13 @@ All figures are available in `figures/publication/`.
 
 | Figure | Description|
 |---|---|
-| `getdist_wmap_vs_joint_corner` | Six-parameter posterior triangle, including \( \Omega_m \), for WMAP9 alone and the joint fit |
+| `getdist_wmap_vs_joint_corner` | Six-parameter posterior triangle, including $`\Omega_m`$, for WMAP9 alone and the joint fit |
 | `getdist_joint_corner` | Joint WMAP9 + DESI DR1 posterior with 68% credible intervals |
-| `getdist_H0_Om_comparison` | \( \Omega_m \)–\(H_0\) plane with DESI DR1 and DR2 BAO-only bands |
-| `concordance_Om_hrd` | \( \Omega_m \)–\(h r_d\) plane showing WMAP9, DESI BAO, and the joint posterior |
-| `Om_comparison` | \( \Omega_m \) compared with CMB-only and BAO-based constraints |
+| `getdist_H0_Om_comparison` | $\Omega_m$ – $H_0$ plane with DESI DR1 and DR2 BAO-only bands |
+| `concordance_Om_hrd` | $`\Omega_m`$ - $`h\,r_d`$ plane showing WMAP9, DESI BAO, and the joint posterior |
+| `Om_comparison` | $`\Omega_m`$  compared with CMB-only and BAO-based constraints |
 | `wmap9_desi_joint_corrected_trace` | MCMC walker traces |
-| `wmap9_desi_joint_corrected_comparison` | One-dimensional posteriors for \( \Omega_b h^2 \), \( \Omega_c h^2 \), and \(H_0\) |
+| `wmap9_desi_joint_corrected_comparison` | One-dimensional posteriors for $\Omega_b h^2$, $\Omega_c h^2$, and $H_0$ |
 
 ## DESI Lyman-α Row Order
 
