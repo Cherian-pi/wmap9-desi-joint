@@ -1,16 +1,15 @@
-# WMAP9 + DESI DR1: a Planck-independent joint ΛCDM constraint
+# WMAP9 + DESI DR1: ΛCDM without Planck
 
-A reproducible MCMC pipeline that combines the WMAP nine-year CMB temperature
-likelihood with DESI DR1 baryon acoustic oscillation measurements, deliberately
-without Planck, to obtain an independent set of flat-ΛCDM parameter constraints.
+This repository performs a joint Bayesian analysis of flat ΛCDM using the WMAP nine-year CMB temperature likelihood and DESI DR1 baryon-acoustic-oscillation (BAO) measurements. Planck is intentionally excluded, so the resulting constraints provide an independent cross-check of the standard cosmological model.
 
-**Author:** Cherian Parangot Ittyipe · [github.com/Cherian-pi](https://github.com/Cherian-pi)
+The full analysis is implemented in reproducible Jupyter notebooks, from data loading and likelihood evaluation to MCMC sampling and publication-ready figures.
 
----
+Maintained by [Cherian Parangot Ittyipe](https://github.com/Cherian-pi)
+([@Cherian-pi](https://github.com/Cherian-pi)).
 
 ## Results
 
-Joint WMAP9 + DESI DR1 flat ΛCDM (32 walkers × 3000 steps, Gelman–Rubin R̂ < 1.001):
+The joint WMAP9 + DESI DR1 fit uses 32 walkers for 3,000 MCMC steps and reaches Gelman–Rubin convergence with \( \hat{R} < 1.001 \).
 
 | Parameter | Joint constraint |
 |---|---|
@@ -24,119 +23,147 @@ Joint WMAP9 + DESI DR1 flat ΛCDM (32 walkers × 3000 steps, Gelman–Rubin R̂ 
 
 ![ΛCDM posterior: WMAP9 alone versus WMAP9 + DESI DR1](figures/publication/getdist_wmap_vs_joint_corner.png)
 
-All six sampled parameters and $Ω_m$, WMAP9 alone (blue) against the joint posterior
-(orange). The contraction is concentrated in $Ω_ch^2$ and $H_0$, where BAO breaks the
-CMB geometric degeneracy; $n_s, ln10^{10}A_s$ and τ are essentially unchanged, as
-expected since BAO carries no information about them.
+*Posterior distributions for the six sampled cosmological parameters and \( \Omega_m \), comparing the WMAP9-only fit (blue) with the joint WMAP9 + DESI DR1 fit (orange).*
 
-Adding DESI BAO to WMAP9 collapses the CMB-only geometric degeneracy: the long
-$Ω_m–H_0$ ridge in the WMAP9-alone posterior shrinks to a compact contour
-(`getdist_H0_Om_comparison`), tightening $H_0$ by roughly a factor of three while
-shifting it downward by about 0.5 km s⁻¹ Mpc⁻¹. No Planck r_d prior is used
-anywhere — WMAP9 calibrates the sound horizon through the acoustic peaks itself.
+## Interpretation
+
+The largest improvement from adding DESI DR1 BAO is in \( \Omega_c h^2 \) and \( H_0 \). BAO provides an independent geometric constraint that breaks the degeneracy between the matter density and the expansion rate present in the CMB-only analysis.
+
+The parameters \( n_s \), \( \ln(10^{10} A_s) \), and \( \tau \) are largely unchanged, as expected: BAO measurements primarily constrain the expansion history and sound horizon, rather than the primordial perturbation spectrum or optical depth
 
 ![Omega_m - H0 plane: WMAP9 alone, WMAP9 + DESI DR1, and the DESI BAO-alone bands](figures/publication/getdist_H0_Om_comparison.png)
 
-The $Ω_m–H_0$ plane. WMAP9 alone (blue) and WMAP9 + DESI DR1 (orange); the green bands
-show $Ω_m$ from DESI DR1 and DR2 BAO alone (68%).
+*The \( \Omega_m \)–\(H_0\) plane for WMAP9 alone (blue) and WMAP9 + DESI DR1 (orange). Green bands show the 68% \( \Omega_m \) ranges from DESI DR1 and DR2 BAO-only analyses.*
+
+In the WMAP9-only case, the posterior exhibits an extended degeneracy ridge in the \( \Omega_m \)–\(H_0\) plane. Adding DESI BAO substantially reduces this degeneracy: the \(H_0\) constraint becomes approximately three times tighter and shifts downward by roughly \(0.5\ \mathrm{km\,s^{-1}\,Mpc^{-1}}\).
+
+No Planck-derived sound-horizon prior is used. WMAP9 independently determines the sound horizon through its acoustic-peak structure.
 
 ![Concordance in the Omega_m - h r_d plane](figures/publication/concordance_Om_hrd.png)
 
-Concordance in the $Ω_m$ – $h r_d$ plane, the combination BAO measure directly. The WMAP9
-prediction (blue) passes through the DESI DR1 BAO-alone region (green, Δχ² = 2.30 and 6.18),
-and the joint posterior (orange) lies where they overlap.
+*The \( \Omega_m \)–\(h r_d\) plane, the primary BAO-sensitive parameter space. The WMAP9 prediction (blue) is consistent with the DESI DR1 BAO-only region (green), while the joint posterior (orange) lies in the overlap of the two constraints.*
 
 ## Figures
 
-All in `figures/publication/`.
+All figures are available in `figures/publication/`.
 
-| Figure | Content |
+| Figure | Description|
 |---|---|
-| `getdist_wmap_vs_joint_corner` | Six-parameter triangle plus $Ω_m$: WMAP9 alone vs WMAP9 + DESI DR1 |
-| `getdist_joint_corner` | Joint posterior on its own, with 68% limits |
-| `getdist_H0_Om_comparison` | The $Ω_m–H_0$ plane with the DESI DR1 and DR2 BAO-alone bands |
-| `concordance_Om_hrd` | Concordance in the $Ω_m$–$h\,r_d$ plane: WMAP9 prediction, DESI BAO alone, joint |
-| `Om_comparison` | $Ω_m$ compared with CMB-only and BAO-based results |
+| `getdist_wmap_vs_joint_corner` | Six-parameter posterior triangle, including \( \Omega_m \), for WMAP9 alone and the joint fit |
+| `getdist_joint_corner` | Joint WMAP9 + DESI DR1 posterior with 68% credible intervals |
+| `getdist_H0_Om_comparison` | \( \Omega_m \)–\(H_0\) plane with DESI DR1 and DR2 BAO-only bands |
+| `concordance_Om_hrd` | \( \Omega_m \)–\(h r_d\) plane showing WMAP9, DESI BAO, and the joint posterior |
+| `Om_comparison` | \( \Omega_m \) compared with CMB-only and BAO-based constraints |
 | `wmap9_desi_joint_corrected_trace` | MCMC walker traces |
-| `wmap9_desi_joint_corrected_comparison` | 1D posteriors of $Ω_b h^2$, $Ω_c h^2$, $H_0$ |
+| `wmap9_desi_joint_corrected_comparison` | One-dimensional posteriors for \( \Omega_b h^2 \), \( \Omega_c h^2 \), and \(H_0\) |
 
-## The Lyman-α row-ordering issue
+## DESI Lyman-α Row Order
 
-DESI DR1 stores its anisotropic BAO measurements in a per-tracer row order that
-is **not uniform across tracers**:
+When loading the DESI DR1 anisotropic BAO mean files directly, note that the row ordering differs between tracers:
 
-- LRG1, LRG2, LRG3+ELG1, ELG2 → `DM_over_rs` first, then `DH_over_rs`
-- **Lyman-α → `DH_over_rs` first, then `DM_over_rs`**
-- BGS and QSO → isotropic, a single `DV_over_rs` row
+| Tracer | Row order |
+|---|---|
+| LRG1, LRG2, LRG3+ELG1, ELG2 | `DM_over_rs`, then `DH_over_rs` |
+| Lyman-α | `DH_over_rs`, then `DM_over_rs` |
+| BGS, QSO | Isotropic; a single `DV_over_rs` row |
 
-A loader that assigns by row position rather than by the label column therefore
-transposes the two Lyman-α observables against the covariance matrix, inflating
-the DESI χ². The mean files must be read by their quantity label. Notebook
-`03_desi_dr1_lcdm.ipynb` documents the diagnosis and the before/after
-comparison.
+If the data are read by row position rather than by the quantity label, the two Lyman-α values can be incorrectly swapped relative to the covariance matrix. This produces an artificially high DESI \( \chi^2 \).
 
-## Layout
+The recommended approach is to read the mean values using their quantity labels. Notebook `03_desi_dr1_lcdm.ipynb` documents this issue and compares the fit before and after the correction.
 
-```
-notebooks/      01 data loading → 02 WMAP9 alone → 03 DESI DR1 (ordering audit) → 04 joint fit
-data/bao/       DESI DR1 mean + covariance files (see PROVENANCE.md)
-data/           WMAP9 nine-year TT spectrum
-external/       gitignored; third-party likelihood codes are fetched here
-scripts/        download helper for the WMAP9 likelihood
-results/chains/ emcee chains (.npy) and run metadata (.json); superseded/ holds the June run
-figures/        publication figures
-docs/           notes on the WMAP9 library symbols and data files
-```
-
-## Setup
+## Getting Started
 
 ```bash
-git clone https://github.com/Cherian-pi/wmap9-desi-joint.git
+git clone [https://github.com/Cherian-pi/wmap9-desi-joint.git](https://github.com/Cherian-pi/wmap9-desi-joint.git)
 cd wmap9-desi-joint
-python -m venv .venv && source .venv/bin/activate
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 
-# fetch the WMAP9 likelihood (not redistributed here)
+# Download the WMAP9 likelihood; it is not redistributed in this repository
 ./scripts/fetch_wmap_likelihood.sh
 ```
 
-The WMAP nine-year likelihood code and its data products (~1 GB) are not
-committed. They are downloaded from NASA LAMBDA into `external/`, which is
-gitignored, and compiled into `libwmap9.so` locally — the shared object is
-platform-specific and is also not committed.
+The WMAP nine-year likelihood code and associated data products, approximately 1 GB in total, must be downloaded from NASA LAMBDA. They are placed in `external/`, which is excluded from version control.
 
-## Method
+The likelihood is then compiled into `libwmap9.so`. Because this shared library is platform-dependent, it is not committed to the repository.
 
-CAMB supplies the theory TT spectrum; the WMAP9 Fortran likelihood is called
-through a ctypes wrapper around `libwmap9.so`; DESI BAO enters as a Gaussian
-likelihood on the tracer-wise distance ratios. Sampling uses `emcee` with
-`DEMove`; posteriors are plotted with GetDist and corner.
+
+## Methodology
+
+- **CAMB** computes the theoretical CMB temperature power spectrum.
+- The **WMAP9 Fortran likelihood** is called from Python through a `ctypes`
+  wrapper around `libwmap9.so`.
+- **DESI BAO** measurements are incorporated as Gaussian likelihoods on the
+  distance ratios for each tracer.
+- **`emcee`** performs the MCMC sampling using the `DEMove` sampler.
+- **GetDist** and **corner** generate the posterior and corner plots.
+
+## Repository Structure
+
+```text
+notebooks/       01 data loading → 02 WMAP9 alone → 03 DESI DR1 ordering audit → 04 joint fit
+data/bao/        DESI DR1 BAO mean and covariance files; see PROVENANCE.md
+data/            WMAP9 nine-year TT spectrum
+external/        Gitignored directory for third-party likelihood codes
+scripts/         Helper script for downloading the WMAP9 likelihood
+results/chains/  emcee chains (.npy) and run metadata (.json); superseded/ contains earlier runs
+figures/         Publication figures
+docs/            Notes on WMAP9 library symbols and data files
+```
+
+The notebooks are intended to be executed in numerical order.
 
 ## Scope
 
-This repository covers WMAP9-alone and WMAP9 + DESI DR1 joint constraints only.
-DESI-alone fits, Planck likelihood work, and DESI DR2 exploration are
-deliberately out of scope.
+This repository covers:
+
+- WMAP9-only flat ΛCDM constraints
+- Joint WMAP9 + DESI DR1 flat ΛCDM constraints
+
+It does not include:
+
+- DESI-only cosmological fits
+- Planck likelihood analyses
+- DESI DR2 analyses
+
+If the code does not build or a result cannot be reproduced, please open an issue.
 
 ## References
 
-Data
-- Bennett, C. L., et al. 2013, *Nine-year WMAP observations: final maps and results*, ApJS, 208, 20
-- Hinshaw, G., et al. 2013, *Nine-year WMAP observations: cosmological parameter results*, ApJS, 208, 19
-- DESI Collaboration 2024, *DESI 2024 III: Baryon acoustic oscillations from galaxies and quasars*, arXiv:2404.03000
-- DESI Collaboration 2024, *DESI 2024 IV: Baryon acoustic oscillations from the Lyman alpha forest*, arXiv:2404.03001
-- DESI Collaboration 2024, *DESI 2024 VI: Cosmological constraints from the measurements of baryon acoustic oscillations*, arXiv:2404.03002
+### Data
 
-Software
-- Lewis, A., Challinor, A., & Lasenby, A. 2000, *Efficient computation of CMB anisotropies in closed FRW models* (CAMB), ApJ, 538, 473
-- Foreman-Mackey, D., Hogg, D. W., Lang, D., & Goodman, J. 2013, *emcee: the MCMC hammer*, PASP, 125, 306
-- Lewis, A. 2019, *GetDist: a Python package for analysing Monte Carlo samples*, arXiv:1910.13970
-- Torrado, J., & Lewis, A. 2021, *Cobaya: code for Bayesian analysis of hierarchical physical models*, JCAP, 05, 057
+- Bennett, C. L., et al. 2013, *Nine-year WMAP observations: final maps and
+  results*, ApJS, 208, 20.
+- Hinshaw, G., et al. 2013, *Nine-year WMAP observations: cosmological parameter
+  results*, ApJS, 208, 19.
+- DESI Collaboration 2024, *DESI 2024 III: Baryon acoustic oscillations from
+  galaxies and quasars*, arXiv:2404.03000.
+- DESI Collaboration 2024, *DESI 2024 IV: Baryon acoustic oscillations from the
+  Lyman-alpha forest*, arXiv:2404.03001.
+- DESI Collaboration 2024, *DESI 2024 VI: Cosmological constraints from the
+  measurements of baryon acoustic oscillations*, arXiv:2404.03002.
 
-Related work
-- Pang, Y.-H., Zhang, X., & Huang, Q.-G. 2025, *Reevaluating H0 tension with non-Planck CMB and DESI BAO joint analysis*, JCAP, 04, 057 (arXiv:2411.14189)
+### Software
+
+- Lewis, A., Challinor, A., & Lasenby, A. 2000, *Efficient computation of CMB
+  anisotropies in closed FRW models* (CAMB), ApJ, 538, 473.
+- Foreman-Mackey, D., Hogg, D. W., Lang, D., & Goodman, J. 2013, *emcee: the
+  MCMC hammer*, PASP, 125, 306.
+- Lewis, A. 2019, *GetDist: a Python package for analysing Monte Carlo samples*,
+  arXiv:1910.13970.
+- Torrado, J., & Lewis, A. 2021, *Cobaya: code for Bayesian analysis of
+  hierarchical physical models*, JCAP, 05, 057.
+
+### Related Work
+
+- Pang, Y.-H., Zhang, X., & Huang, Q.-G. 2025, *Reevaluating H0 tension with
+  non-Planck CMB and DESI BAO joint analysis*, JCAP, 04, 057
+  (arXiv:2411.14189).
 
 ## License
 
-Code: MIT (see `LICENSE`). WMAP and DESI data products remain under the terms
-set by their respective collaborations.
+The source code is released under the MIT License; see `LICENSE`.
+
+The WMAP and DESI data products remain subject to the terms and conditions of
+their respective collaborations.
