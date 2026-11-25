@@ -9,7 +9,7 @@ Maintained by [Cherian P Ittyipe](https://github.com/Cherian-pi)
 
 ## Results
 
-The joint WMAP9 + DESI DR1 fit uses 32 walkers for 3,000 MCMC steps and reaches Gelman–Rubin convergence with $\hat{R}$ < 1.001 \).
+The joint WMAP9 + DESI DR1 fit uses 32 walkers for 3,000 MCMC steps and reaches Gelman–Rubin convergence with $\hat{R}$ < 1.001.
 
 | Parameter | Joint constraint |
 |---|---|
