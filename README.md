@@ -27,7 +27,7 @@ The joint WMAP9 + DESI DR1 fit uses 32 walkers for 3,000 MCMC steps and reaches 
 
 ## Interpretation
 
-The largest improvement from adding DESI DR1 BAO is in ( $\Omega_c h^2 $) and ($ H_0$ ). BAO provides an independent geometric constraint that breaks the degeneracy between the matter density and the expansion rate present in the CMB-only analysis.
+The largest improvement from adding DESI DR1 BAO is in ( $\Omega_c h^2 $) and ($H_0$ ). BAO provides an independent geometric constraint that breaks the degeneracy between the matter density and the expansion rate present in the CMB-only analysis.
 
 The parameters \( n_s \), \( \ln(10^{10} A_s) \), and \( \tau \) are largely unchanged, as expected: BAO measurements primarily constrain the expansion history and sound horizon, rather than the primordial perturbation spectrum or optical depth
 
